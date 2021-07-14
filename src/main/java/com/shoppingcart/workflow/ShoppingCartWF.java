@@ -203,7 +203,8 @@ public class ShoppingCartWF {
 		for (OrderDetail orderDetail : orderDetails) {
 			log.info("Product is: {}", orderDetail.getProduct().getProductName());
 			String dateStr = DateUtils.getRandomDateString(7);
-			
+
+			log.info("What is the date: ", dateStr);			
 			SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy");
 			orderDetail.setShippedDate(format.parse(dateStr));
 			log.info("Updated shipped date for orderDetail: {}", orderDetail.getOrderDetailNumber());
